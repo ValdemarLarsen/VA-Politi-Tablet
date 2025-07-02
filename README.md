@@ -1,10 +1,10 @@
 <div align="center">
-    <img href="https://projecterror.dev" width="150" src="https://i.tasoagc.dev/c1pD" alt="Material-UI logo" />
+    <img href="https://github.com/ValdemarLarsen/VA-Politi-Tablet" width="150" src="https://i.fmfile.com/qMb3oo97IbyX4d9IgBUE5/images/logo_dark.png" alt="Material-UI logo" />
 </div>
-<h1 align="center">FiveM React and Lua Boilerplate</h1>
+<h1 align="center">VA Politi Tablet</h1>
 
 <div align="center">
-A simple and extendable React (TypeScript) boilerplate designed around the Lua ScRT
+ ESX Politi tablet udviklet af va-scripts
 </div>
 
 <div align="center">
