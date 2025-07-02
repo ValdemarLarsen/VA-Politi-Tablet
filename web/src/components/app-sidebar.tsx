@@ -33,8 +33,8 @@ const items = [
         icon: HomeIcon,
     },
     {
-        title: "Players",
-        url: "/players",
+        title: "Personregister",
+        url: "/personregister",
         icon: UsersIcon,
     },
     {

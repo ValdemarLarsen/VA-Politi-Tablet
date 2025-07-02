@@ -7,6 +7,12 @@ import './index.css';
 
 import Layout from "./app/layout";
 import Index from "./app/index";
+
+
+//Sider
+import PersonRegisterSide from "@/app/sider/personregister/Side"
+import BrugerProfilSide from "@/app/sider/minprofil/side"
+
 import { cn, isBrowser } from "./lib/utils";
 
 
@@ -31,9 +37,14 @@ const routeTree = rootRoute.addChildren([
   }),
   new Route({
     getParentRoute: () => rootRoute,
-    path: "/players",
-    component: Index,
+    path: "/personregister",
+    component: PersonRegisterSide,
   }),
+  new Route({
+    getParentRoute: () => rootRoute,
+    path: "/minprofil",
+    component: BrugerProfilSide,
+  })
 ]);
 
 const router = new Router({ routeTree });

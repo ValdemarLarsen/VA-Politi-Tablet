@@ -30,6 +30,9 @@ import {
     useSidebar,
 } from "@/components/ui/sidebar"
 
+
+import { Link } from "@tanstack/react-router"
+
 export function NavUser({
     user,
 }: {
@@ -88,10 +91,12 @@ export function NavUser({
                         </DropdownMenuGroup>
                         <DropdownMenuSeparator />
                         <DropdownMenuGroup>
-                            <DropdownMenuItem>
-                                <BadgeCheck />
-                                Account
-                            </DropdownMenuItem>
+                            <Link to="/minprofil">
+                                <DropdownMenuItem>
+                                    <BadgeCheck />
+                                    Account
+                                </DropdownMenuItem>
+                            </Link>
                             <DropdownMenuItem>
                                 <CreditCard />
                                 Billing

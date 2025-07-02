@@ -14,8 +14,16 @@ games {
 
 ui_page 'web/build/index.html'
 
+
+shared_scripts {
+  '@ox_lib/init.lua',
+}
+
 client_script "client/**/*"
-server_script "server/**/*"
+server_scripts {
+  "@oxmysql/lib/MySQL.lua",
+  "server/**/*"
+}
 
 files {
 	'web/build/index.html',
