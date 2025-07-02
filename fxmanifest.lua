@@ -17,12 +17,19 @@ ui_page 'web/build/index.html'
 
 shared_scripts {
   '@ox_lib/init.lua',
+  'shared/**/*',
 }
 
 client_script "client/**/*"
 server_scripts {
   "@oxmysql/lib/MySQL.lua",
   "server/**/*"
+}
+
+
+shared_scripts {
+  '@es_extended/imports.lua', -- Import ESX functions and PlayerData
+  '@es_extended/locale.lua', -- Import the Locale system
 }
 
 files {
