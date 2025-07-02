@@ -10,7 +10,7 @@ import {
 export function SearchFormTablet({ ...props }: React.ComponentProps<"form">) {
     return (
         <form {...props}>
-            <SidebarGroup className="py-0">
+            <SidebarGroup className="py-4">
                 <SidebarGroupContent className="relative">
                     <Label htmlFor="search" className="sr-only">
                         Search

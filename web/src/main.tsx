@@ -16,6 +16,9 @@ import BrugerProfilSide from "@/app/sider/minprofil/side"
 import { cn, isBrowser } from "./lib/utils";
 
 
+//ThemeProvider
+import { ThemeProvider } from "@/components/theme-provider"
+
 import {
   RootRoute,
   RouterProvider,
@@ -56,12 +59,14 @@ function Root() {
         className={cn(
           "h-full w-full",
           isBrowser() &&
-            "bg-[url('https://forum.cfx.re/uploads/default/5d811d13c320e5e2323aea587f2eb4802d28f705')] bg-cover",
+          "bg-[url('https://forum.cfx.re/uploads/default/5d811d13c320e5e2323aea587f2eb4802d28f705')] bg-cover",
         )}
       >
-        <Layout>
-          <Outlet />
-        </Layout>
+        <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+          <Layout>
+            <Outlet />
+          </Layout>
+        </ThemeProvider>
       </div>
     </VisibilityProvider>
   );

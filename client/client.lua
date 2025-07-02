@@ -6,14 +6,14 @@ local function toggleNuiFrame(shouldShow)
 end
 
 RegisterCommand("tablet", function()
-	if #personRegister == 0 then
+	--[[ if #personRegister == 0 then
 		lib.notify({
 			title = "Politi Tablet",
 			description = "Politi tabletten er ikke klar til brug | Forsøg at gå på job igen..",
 			type = "error",
 		})
 		return
-	end
+	end ]]
 
 	toggleNuiFrame(true)
 	debugPrint("Show NUI frame")

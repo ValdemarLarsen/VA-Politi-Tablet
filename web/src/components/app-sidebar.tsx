@@ -25,6 +25,9 @@ import { SearchFormTablet } from "@/components/search-form"
 //user felt i bunden:
 import { NavUser } from "@/components/nav-user"
 
+
+
+
 // Menu items
 const items = [
     {
@@ -61,17 +64,17 @@ export function AppSidebar({ className, ...props }: React.ComponentProps<typeof 
         <Sidebar className={`h-full ${className}`} {...props}>
             <SidebarHeader>
                 <SidebarMenu>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem className="border-b-2 border-blue-500">
                         <SidebarMenuButton size="lg" asChild>
-                            <a href="#">
+                            <Link to="/">
                                 <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
-                                    <GalleryVerticalEnd className="size-4" />
+                                    <img src={`${import.meta.env.BASE_URL}ikoner/logo_dark.png`} alt="Logo" />
                                 </div>
                                 <div className="flex flex-col gap-0.5 leading-none">
                                     <span className="font-medium">Documentation</span>
                                     <span className="">v1.0.0</span>
                                 </div>
-                            </a>
+                            </Link>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
                 </SidebarMenu>
