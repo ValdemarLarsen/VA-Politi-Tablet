@@ -5,7 +5,7 @@ CreateThread(function()
 		lib.print.info("[POLITI TABLET] Henter personregister - Dette thread kører hvert 5 minut")
 		-- Vent i 5 minutter (5 * 60 * 1000 ms = 300000 ms)
 
-		local response = MySQL.rawExecute.await("SELECT `identifier`, `firstname`, `lastname` FROM `users`")
+		local response = MySQL.rawExecute.await("SELECT `identifier`, `firstname`, `lastname`, `avatar_url` FROM `users`")
 		serverPersonRegister = response
 		lib.print.info("[POLITI TABLET] Personregister hentet - Indeholder " .. #serverPersonRegister .. " elementer")
 
@@ -24,7 +24,7 @@ lib.callback.register("va-tablet:hentPersonRegister", function(source)
 		print("Bruger cached data")
 		return serverPersonRegister
 	else
-		local response = MySQL.rawExecute.await("SELECT `identifier`, `firstname`, `lastname` FROM `users`")
+		local response = MySQL.rawExecute.await("SELECT `identifier`, `firstname`, `lastname`, `avatar_url` FROM `users`")
 		serverPersonRegister = response
 		return response
 	end

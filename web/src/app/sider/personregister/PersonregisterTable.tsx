@@ -102,6 +102,13 @@ type Item = {
     balance: number
 }
 
+
+interface PersonregisterData {
+    identifier: string;
+    firstname: string;
+    lastname: string;
+    avatar_url: string;
+}
 // Custom filter function for multi-column searching
 const multiColumnFilterFn: FilterFn<Item> = (row, columnId, filterValue) => {
     const searchableRowContent =
@@ -145,10 +152,27 @@ const columns: ColumnDef<Item>[] = [
         enableHiding: false,
     },
     {
-        header: "Name",
+        header: "Fuldenavn",
         accessorKey: "name",
         cell: ({ row }) => (
-            <div className="font-medium">{row.getValue("name")}</div>
+            <>
+                {/* <div className="font-medium">{row.getValue("name")}</div> */}
+                <div className="flex items-center gap-3">
+                    <img
+                        className="rounded-full"
+                        src={row.getValue("avatar_url")}
+                        width={40}
+                        height={40}
+                        alt={row.getValue("name")}
+                    />
+                    <div>
+                        <div className="font-medium">{row.getValue("name")}</div>
+                        <span className="text-muted-foreground mt-0.5 text-xs">
+                            {row.getValue("identifier")}
+                        </span>
+                    </div>
+                </div>
+            </>
         ),
         size: 180,
         filterFn: multiColumnFilterFn,
@@ -212,7 +236,7 @@ const columns: ColumnDef<Item>[] = [
     },
 ]
 
-export default function PersonregisterTable() {
+export default function PersonregisterTable({ personer }: { personer: PersonregisterData[] }) {
     const id = useId()
     const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([])
     const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({})

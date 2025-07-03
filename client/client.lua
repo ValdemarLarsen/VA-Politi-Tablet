@@ -35,6 +35,16 @@ RegisterNUICallback("getClientData", function(data, cb)
 	cb(retData)
 end)
 
+
+RegisterNUICallback("va-tablet:hentClientPersonRegister", function(data, cb)
+
+	if #personRegister > 0 then
+		cb(personRegister)
+	else
+		cb(false)
+	end
+end)
+
 AddEventHandler("esx:playerLoaded", function(xPlayer, skin)
 	print("The character " .. xPlayer.name .. " successfully loaded")
 	if xPlayer.job.name == Config.TabletIndstillinger.politiJob then

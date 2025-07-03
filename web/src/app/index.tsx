@@ -11,8 +11,11 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog"
+
+
+import ChartFilterDemo from "@/app/sider/minprofil/AttendanceGrid"
+
 export default function Index() {
   const [hasReadToBottom, setHasReadToBottom] = useState(false)
   const contentRef = useRef<HTMLDivElement>(null)
@@ -265,6 +268,7 @@ export default function Index() {
             <p className="text-xs text-muted-foreground">+19% from last month</p>
           </CardContent>
         </Card>
+        <ChartFilterDemo />
       </div>
     </>
   );
