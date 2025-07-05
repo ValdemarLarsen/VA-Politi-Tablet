@@ -62,11 +62,10 @@ function Root() {
           "bg-[url('https://forum.cfx.re/uploads/default/5d811d13c320e5e2323aea587f2eb4802d28f705')] bg-cover",
         )}
       >
-        <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-          <Layout>
-            <Outlet />
-          </Layout>
-        </ThemeProvider>
+
+        <Layout>
+          <Outlet />
+        </Layout>
       </div>
     </VisibilityProvider>
   );
